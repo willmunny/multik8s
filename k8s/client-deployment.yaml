@@ -12,8 +12,10 @@ spec:
       labels:
         component: web
     spec:
+      terminationGracePeriodSeconds: 20
       containers:
         - name: client
           image: leandrosoares/multi-client
+          imagePullPolicy: "Always"
           ports:
             - containerPort: 3000
